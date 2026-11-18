@@ -1,0 +1,27 @@
+alias: "UPS: Shutdown Home Assistant when runtime < 10 min"
+description: "Gracefully shuts down the Home Assistant host when the Eaton UPS is on battery and remaining runtime drops below 10 minutes."
+mode: single
+
+triggers:
+  - trigger: numeric_state
+    entity_id: sensor.eaton_ups_runtime_remaining
+    below: 10
+    above: 0
+    for:
+      minutes: 1
+
+conditions:
+  - condition: state
+    entity_id: sensor.eaton_ups_status
+    state: "On Battery"
+
+actions:
+  - action: notify.notify
+    data:
+      title: "CRITICAL: UPS Battery Low (< 10 min)"
+      message: >
+        Eaton UPS runtime remaining is {{ states('sensor.eaton_ups_runtime_remaining') }} min.
+        Shutting down Home Assistant gracefully.
+  - delay:
+      seconds: 10
+  - action: hassio.host_shutdown
