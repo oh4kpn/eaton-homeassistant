@@ -30,3 +30,8 @@ This configuration has been verified against the following hardware and firmware
 2. Replace `192.168.1.100` with your UPS IP address.
 3. Go to **Developer Tools -> YAML**, click **Check Configuration**, and reload **SNMP** and **Template Entities** (or restart Home Assistant).
 4. Add a new **Manual** card to your Lovelace dashboard and paste the contents of `lovelace_card.yaml`.
+
+## Dashboard Preview
+
+![Eaton 9PX Home Assistant Lovelace Card](dashboard_example.png)
+*Example Lovelace card showing real-time `0.1 V` voltage precision, internal temperature, and calculated UPS overhead power (labels mainly in Finnish at this example, sorry for that).*
