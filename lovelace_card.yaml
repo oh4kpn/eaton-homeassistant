@@ -1,0 +1,50 @@
+type: entities
+title: Eaton 9PX UPS
+show_header_toggle: false
+entities:
+  - entity: sensor.eaton_ups_status
+    name: Status
+    icon: mdi:battery-charging-100
+  - entity: sensor.eaton_ups_battery_soc
+    name: Battery Charge
+  - entity: sensor.eaton_ups_runtime_remaining
+    name: Estimated Runtime
+    icon: mdi:timer-sand
+  - entity: sensor.eaton_ups_temperature
+    name: Temperature
+    icon: mdi:thermometer
+  - type: divider
+  - entity: sensor.ups_wall_plug_power
+    name: Wall Input Power (Smart Plug)
+    icon: mdi:power-socket-eu
+  - entity: sensor.eaton_ups_output_power
+    name: Output Active Power
+    icon: mdi:flash
+  - entity: sensor.eaton_ups_own_consumption
+    name: UPS Overhead (Loss)
+    icon: mdi:transmission-tower
+  - entity: sensor.eaton_ups_apparent_power
+    name: Apparent Power
+    icon: mdi:flash-outline
+  - entity: sensor.eaton_ups_load_percentage
+    name: Load
+    icon: mdi:gauge
+  - entity: sensor.eaton_ups_output_current
+    name: Output Current
+    icon: mdi:current-ac
+  - type: divider
+  - entity: sensor.eaton_ups_input_voltage
+    name: Input Voltage
+    icon: mdi:sine-wave
+  - entity: sensor.eaton_ups_output_voltage
+    name: Output Voltage
+    icon: mdi:power-plug
+  - entity: sensor.eaton_ups_frequency
+    name: Output Frequency
+    icon: mdi:waveform
+  - entity: sensor.eaton_ups_battery_voltage
+    name: Battery Voltage (DC)
+    icon: mdi:car-battery
+  - entity: sensor.eaton_ups_alarms
+    name: Active Alarms
+    icon: mdi:alert-circle-outline
