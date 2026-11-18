@@ -34,4 +34,5 @@ This configuration has been verified against the following hardware and firmware
 ## Dashboard Preview
 
 ![Eaton 9PX Home Assistant Lovelace Card](dashboard_example.png)
-*Example Lovelace card showing real-time `0.1 V` voltage precision, internal temperature, and calculated UPS overhead power (labels mainly in Finnish at this example, sorry for that).*
+
+*Example Lovelace card showing real-time `0.1 V` voltage precision, internal temperature, and calculated UPS overhead power (labels mainly in Finnish in this example, sorry for that).*
