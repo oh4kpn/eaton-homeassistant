@@ -1,10 +1,17 @@
 # Eaton 9PX UPS SNMP Package for Home Assistant
 
-High-precision Home Assistant YAML package and Lovelace dashboard card for **Eaton 9PX** (and compatible Eaton Network-M2 / Network-M3) UPS units over SNMPv1.
+High-precision Home Assistant YAML package, shutdown automation, and Lovelace dashboard card for **Eaton 9PX** (and compatible Eaton Network-M2 / Network-M3) UPS units over SNMPv1.
+
+![Lovelace Dashboard Preview](example_9px_lovelace.png)
 
 Unlike standard RFC1628-only templates that truncate readings to whole integers, this configuration combines **Eaton PowerChain MIB**, **XUPS-MIB**, and **RFC1628** OIDs to expose **0.1 V**, **0.1 Hz**, and **0.1 A** decimal precision alongside operating mode decoding (including *High Efficiency / ECO*) and optional UPS self-consumption (overhead) calculation.
 
-![Lovelace Dashboard Preview](example_9px_lovelace.png)
+## Repository Contents
+
+- [`eaton_9px_ups.yaml`](eaton_9px_ups.yaml) — Home Assistant package with 13 SNMP sensors and optional UPS self-consumption template sensor
+- [`eaton_9px_card.yaml`](eaton_9px_card.yaml) — Lovelace `entities` dashboard card YAML
+- [`automation_shutdown.yaml`](automation_shutdown.yaml) — Automated graceful shutdown / low-battery protection template
+- [`example_9px_lovelace.png`](example_9px_lovelace.png) — Dashboard preview screenshot
 
 ## Features
 
