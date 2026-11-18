@@ -4,6 +4,8 @@ High-precision Home Assistant YAML package and Lovelace dashboard card for **Eat
 
 Unlike standard RFC1628-only templates that truncate readings to whole integers, this configuration combines **Eaton PowerChain MIB**, **XUPS-MIB**, and **RFC1628** OIDs to expose **0.1 V**, **0.1 Hz**, and **0.1 A** decimal precision alongside operating mode decoding (including *High Efficiency / ECO*) and optional UPS self-consumption (overhead) calculation.
 
+![Lovelace Dashboard Preview](example_9px_lovelace.png)
+
 ## Features
 
 - **0.1-unit resolution** for Input Voltage (`V`), Output Voltage (`V`), Battery DC Voltage (`V`), Output Frequency (`Hz`), and Output Current (`A`)
