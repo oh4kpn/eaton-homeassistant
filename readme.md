@@ -29,7 +29,7 @@ Unlike standard RFC1628-only templates that truncate readings to whole integers,
 ## Installation
 
 1. **Create the package file:**
-   Create `/config/packages/eaton_9px_ups.yaml` (create the `/config/packages` directory first if it does not exist) and paste the contents of [`packages/eaton_9px_ups.yaml`](packages/eaton_9px_ups.yaml) into it.
+   Create `/config/packages/eaton_9px_ups.yaml` (create the `/config/packages` directory first if it does not exist) and paste the contents of [`eaton_9px_ups.yaml`](eaton_9px_ups.yaml) into it.
 
 2. **Configure UPS IP & SNMP Community:**
    Replace `192.168.1.100` with your Eaton network card's IP address and `public` with your SNMPv1 read-only community string across the sensor definitions.
@@ -42,7 +42,7 @@ Unlike standard RFC1628-only templates that truncate readings to whole integers,
    - Perform a full **Restart Home Assistant** (a simple YAML reload is not enough on initial setup because the legacy `snmp` platform requires a full restart to register new entities).
 
 5. **Add the Lovelace Dashboard Card:**
-   Open your dashboard, click **Edit Dashboard → + Add Card → Manual**, and paste the contents of [`lovelace/eaton_9px_card.yaml`](lovelace/eaton_9px_card.yaml).
+   Open your dashboard, click **Edit Dashboard → + Add Card → Manual**, and paste the contents of [`eaton_9px_card.yaml`](eaton_9px_card.yaml).
 
 ## Included Sensors & OID Reference
 
